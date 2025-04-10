@@ -56,26 +56,20 @@
         }
     
         .transmission {
+            width: 100%;
           max-width: 800px;
           padding: 20px;
+          word-break: break-word;
+            overflow-wrap: break-word;
         }
-    
-        @media (max-width: 600px) {
-            .transmission {
-                padding-top: 50px;
-            }
 
-            .trans-line {
-                font-size: 1rem; /* reduced text size on mobile */
-                margin: 12px 0;
-            }
-        }
     
         .trans-line {
           opacity: 0;
           transition: opacity 9.654s ease-in-out;
           margin: 20px 0;
-          font-size: 2rem;
+          font-size: clamp(1rem, 4vw, 2rem); /* Responsive font size */
+            line-height: 1.4;
         }
     
         .visible {
